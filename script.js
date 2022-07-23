@@ -11,7 +11,7 @@
 // alert("Hello, " + "you are " + calculatedAge + " years old!");
 
 function tellage() {
-    let input = document.getElementById("age").value;
+    let input = +document.getElementById("age").value;
     let dateEntered = new Date(input);
 
    let birthyear= dateEntered.getFullYear();
@@ -23,24 +23,20 @@ function tellage() {
     let result = +currentyear - +birthyear ;
     let resultm = +currentmonth - +birthmonth;
     
-    document.getElementById("demo").innerHTML = "Your Age is " +result;
-//     let age =document.getElementById("age").value = Date();
+    document.getElementById("demo").innerHTML = "Your Age is "+ result;
 
-// c
-//     let today = new Date();
-// let currentyear = today.getFullYear();
+    const day = document.querySelector(`.day`) ;
+    const hour = document.querySelector(`.hours`) ;
+    const minute = document.querySelector(`.minute`) ;
+    const second = document.querySelector(`.second`) ;
 
+const birthday = new Date(`${input + 1}00:00:00:`)
 
-// let peryear= age.getFullYear()
-
-// let result = +currentyear - +peryear ;
-
-// 
-
-// console.log("today", result)
-
-
-
+const diff = +today - +birthyear
+const d = Math.floor(result/1000 /60/60/24)
+const h = Math.floor(result/1000 /60/60)%24;
+const m = Math.floor(result/1000 /60)%60;
+const s = Math.floor(result/1000 )%60;
 
 }
 

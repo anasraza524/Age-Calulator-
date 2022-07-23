@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Age Teller</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
 </head>
 <body>
     
 
 <form onsubmit="tellage(); return false" >
-    <label for="">Enter Your Date of birth</label>
-    <input type="date" id="age" >
+    <label for="">Enter Your Date of birth</label><br>
+    <input type="date" id="age" ><br>
     <button type="submit">Submit</button>
     <p class="yourage"></p>
     <div class="birthday">
@@ -20,8 +21,25 @@
     </div>
 
 
+    <div class="countdown">
+        <h2 class="day">00</h2>
+        <small>Day</small>
+        
+        <h2 class="hours">00</h2>
+        <small>Hours</small>
+        
+        <h2 class="minute">00</h2>
+        <small>minute</small>
+        
+        <h2 class="second">00</h2>
+        <small>second</small>
+        </div>
+
 </form>
 
-<script src="script.js"></script>
+
+
+
+<script src="time.js"></script>
 </body>
 </html>
