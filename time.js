@@ -1,5 +1,10 @@
 function tellage() {
+
+   
+    
+    
     let input = document.getElementById("age").value;
+
     let dateEntered = new Date(input);
 
    let birthyear= dateEntered.getFullYear();
@@ -14,11 +19,11 @@ let birthsday = dateEntered.getDay();
     let resultd = +currentday - +birthsday;
 
     let dateofbirgth = ""
-    if(resultm < 0 || resultd>=0 && resultd <0){
+    if(resultm < 0 || resultd>0 ){
          dateofbirgth =
          moment(input).format(`MMMM DD, ${currentyear} `);
             }
-        else{
+        else if(resultm > 0 || resultd<0){
              dateofbirgth =
             moment(input).format(`MMMM DD, ${+currentyear + 1} `);
         }
@@ -26,8 +31,7 @@ let birthsday = dateEntered.getDay();
     
     
 
-    document.getElementById("demo").innerHTML
-     = "Your Age is "+ resultd;
+    
 
   // Set the date we're counting down to
 let endDate = new Date(`${dateofbirgth} 00:00:00`).getTime();
@@ -56,8 +60,17 @@ let x = setInterval(function() {
     }
 }, 1000);
 
+if(isNaN(input)){
+document.querySelector("#visible").classList.remove("hidden");
+document.getElementById("demo").innerHTML
+     = "You are "+ result+ " year old";
+    }
+else{
+    alert("Enter Date of birth")
+}
 
 }
+
 
 
 

@@ -10,9 +10,11 @@
 </head>
 <body>
     
-
-<form onsubmit="tellage(); return false" >
-    <label for="">Enter Your Date of birth</label><br>
+<div class="glass">
+    
+<form  onsubmit="tellage(); return false" >
+    <h1 class="heading">Birth-Watch</h1>
+    <!-- <label style="font-size:22px;">   Enter Your Date of birth</label><br> -->
     <input type="date" id="age" ><br>
     <button type="submit">Submit</button>
     <p class="yourage"></p>
@@ -21,23 +23,24 @@
     </div>
 
 
-    <div class="countdown">
-        <h2 class="day">00</h2>
+    <div class="hidden" id="visible">
+        <div class="countdown">
+      <div class="box"> <h2  class="day">00</h2></div> 
         <small>Day</small>
         
-        <h2 class="hours">00</h2>
+        <div class="box"> <h2  class="hours">00</h2></div> 
         <small>Hours</small>
         
-        <h2 class="minute">00</h2>
+        <div class="box"> <h2  class="minute">00</h2></div> 
         <small>minute</small>
         
-        <h2 class="second">00</h2>
+        <div class="box"><h2  class="second">00</h2></div> 
         <small>second</small>
         </div>
-
+    </div>
 </form>
 
-
+</div>
 
 
 <script src="time.js"></script>
